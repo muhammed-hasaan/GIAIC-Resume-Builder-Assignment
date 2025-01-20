@@ -88,7 +88,7 @@ document.getElementById("share-resume").addEventListener("click", function () {
         hobbies: localStorage.getItem("hobbies")
     }).toString();
     // Create the link to share the resume
-    var resumeLink = "http://127.0.0.1:5500/ViewResume.html?".concat(shareData);
+    var resumeLink = "https://giaic-resume-builder-assignment.vercel.app/ViewResume.html?".concat(shareData);
     // Copy the resume link to the clipboard
     navigator.clipboard.writeText(resumeLink)
         .then(function () {
