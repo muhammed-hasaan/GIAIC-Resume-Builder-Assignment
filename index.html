@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background:rgb(245, 245, 245);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    
+    .mainContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .Container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 400px;
+      text-align: center;
+      transition: all 0.3s ease;
+      transform: scale(1.05);
+      box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+
+    .Container img {
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .Container p {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    button {
+      width: 200px;
+      height: 50px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #764ba2, #667eea);
+      border: 4px dotted white;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-decoration: 3s;
+      
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      border: 4px dashed white;
+
+    }
+    
+    button:focus {
+      outline: none;
+    }
+    
+    /* Adding a glow effect for the button on hover */
+    button:active {
+      box-shadow: 0 0 30px rgba(118, 75, 162, 0.7);
+    }
+
+    /* Smooth background transition */
+    body, .Container {
+      transition: background 0.5s ease;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="mainContainer">
+    <div class="Container">
+      <img src="data:image/jpeg;base64,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"  alt="Resume logo">
+      <p>Create a professional resume to secure your dream job.</p>
+      <button onclick="window.location.href = 'Resume.html';">Create Resume</button>
+    </div>
+  </div>
+
+</body>
+</html>
